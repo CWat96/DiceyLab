@@ -15,11 +15,12 @@ public class Bins {
             System.out.println("Invalid binNumber: " + binNumber);
         }
     }
-
-    public static void main(String[] args) {
-        Bins bins = new Bins(2);
-        bins.incrementBin(3);
-        System.out.println(Arrays.toString(bins.diceArr));
-
+    public int getBin(int binNumber) {
+        if (binNumber >= 0 && binNumber < diceArr.length) {
+            return diceArr[binNumber];
+        } else {
+            System.out.println("Invalid binNumber: " + binNumber);
+            return -1; // Or throw an exception, depending on your design choice
+        }
     }
 }

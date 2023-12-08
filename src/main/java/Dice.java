@@ -25,4 +25,7 @@ public class Dice {
         return sum;
     }
 
+    public int tossAndSum() {
+        return 0;
+    }
 }
